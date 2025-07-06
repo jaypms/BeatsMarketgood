@@ -1,42 +1,58 @@
 {
+  "site_name": "BeatsMarket",
+  "welcome_title": "Bienvenue sur BeatsMarket",
+  "welcome_description": "Écoute, vends et achète des instrumentales 100% automatisé.",
+  
+  "featured_title": "Beats mis en avant",
+  "all_beats_title": "Tous les beats",
+  "no_beats": "Aucun beat trouvé pour ce style.",
+  
+  "filter_by_style": "Filtrer par style",
+  "filter_by_price": "Filtrer par prix",
+  "search_placeholder": "Rechercher un beat, un style, un beatmaker...",
+  
+  "upload_title": "Uploader un nouveau beat",
+  "upload_button": "Uploader",
+  "upload_success": "Beat uploadé avec succès",
+  "upload_error": "Erreur lors de l’upload",
+  
+  "title_label": "Titre",
+  "description_label": "Description",
+  "price_label": "Prix",
+  "style_label": "Style musical",
+  "file_label": "Fichier MP3",
+  "file_wav_label": "Fichier WAV (exclusif)",
+  "cover_label": "Image de couverture",
+  
+  "profile_title": "Mon profil",
   "my_beats": "Mes beats",
-  "no_beats": "Aucun beat pour le moment.",
-  "upload": "Téléverser un beat",
-  "beat_title": "Titre de l'instrumentale",
-  "profile": "Profil",
-  "subscription": "Abonnement",
-  "success_title": "Paiement réussi !",
-  "success_message": "Merci pour votre achat.",
-  "success_redirect": "Vous allez être redirigé vers votre profil.",
-  "go_to_profile": "Aller au profil",
-  "video_thanks": "Merci d'avoir regardé cette vidéo.",
-  "ANTI": "Anti-vol par watermark automatique",
-  "select_language": "Choisir la langue",
+  "edit_profile": "Modifier le profil",
   "logout": "Se déconnecter",
-  "login": "Connexion",
-  "register": "Inscription",
-  "style_trap": "Trap",
-  "style_drill": "Drill",
-  "style_rnb": "RnB",
-  "style_afro": "Afro",
-
-  "plan_free_title": "Gratuit",
-  "plan_free_price": "0 € / mois",
-  "plan_free_feature1": "3 beats maximum",
-  "plan_free_feature2": "30% de commission",
-  "plan_free_feature3": "Accès limité",
-
-  "plan_pro_title": "Pro",
-  "plan_pro_price": "10 € / mois",
-  "plan_pro_feature1": "10 beats maximum",
-  "plan_pro_feature2": "20% de commission",
-  "plan_pro_feature3": "Support prioritaire",
-
-  "plan_diamond_title": "Diamant",
-  "plan_diamond_price": "20 € / mois",
-  "plan_diamond_feature1": "Beats illimités",
-  "plan_diamond_feature2": "0% de commission",
-  "plan_diamond_feature3": "Mise en avant prioritaire",
-
-  "subscribe": "S'abonner"
-}
+  
+  "subscription_title": "Choisir un abonnement",
+  "subscription_free": "Gratuit",
+  "subscription_pro": "Pro",
+  "subscription_unlimited": "Illimité",
+  "subscribe_button": "S’abonner",
+  
+  "exclusive_license": "Licence exclusive",
+  "standard_license": "Licence standard",
+  "buy_button": "Acheter",
+  "listen_button": "Écouter",
+  "download_button": "Télécharger",
+  
+  "beat_by": "Beat par",
+  "more_by_this_artist": "Plus de beats par cet artiste",
+  
+  "error_generic": "Une erreur est survenue.",
+  "loading": "Chargement...",
+  "no_results": "Aucun résultat trouvé.",
+  "back_home": "Retour à l’accueil",
+  
+  "first_name": "Prénom",
+  "last_name": "Nom",
+  "email": "Email",
+  "bio": "Biographie",
+  "save": "Enregistrer",
+  
+  "
