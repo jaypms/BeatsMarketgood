@@ -1,13 +1,7 @@
-import '@/styles/globals.css'; // adapte ce chemin selon ton projet
-import LanguageSwitcher from '@/components/LanguageSwitcher';
+// pages/_app.js
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <LanguageSwitcher />
-      <Component {...pageProps} />
-    </>
-  );
+import React from 'react';
+
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
-
-export default MyApp;
