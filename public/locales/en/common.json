@@ -1,7 +1,8 @@
 {
   "my_beats": "My beats",
   "no_beats": "No beats yet.",
-  "upload": "Upload",
+  "upload": "Upload a beat",
+  "beat_title": "Beat title",
   "profile": "Profile",
   "subscription": "Subscription",
   "success_title": "Payment successful!",
@@ -13,5 +14,9 @@
   "select_language": "Select language",
   "logout": "Logout",
   "login": "Login",
-  "register": "Register"
+  "register": "Register",
+  "style_trap": "Trap",
+  "style_drill": "Drill",
+  "style_rnb": "RnB",
+  "style_afro": "Afro"
 }
