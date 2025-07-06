@@ -1,103 +1,157 @@
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { collection, getDocs, query, where } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
-import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Home({ beats }) {
-  const { t } = useTranslation('home');
-  const [selectedStyle, setSelectedStyle] = useState('all');
+export default function Home() {
+  const [lang, setLang] = useState('fr');
+  const router = useRouter();
 
-  const filteredBeats = selectedStyle === 'all'
-    ? beats
-    : beats.filter(beat => beat.style === selectedStyle);
+  const t = {
+    fr: {
+      welcome: "Bienvenue sur BeatsMarket",
+      chooseProfile: "Choisissez votre profil pour commencer :",
+      beatmaker: "Je suis BeatMaker",
+      buyer: "Je veux acheter des instrus",
+      featured: "Beatmakers mis en avant",
+      listenBeats: "Écoutez quelques instrus sélectionnées",
+      noContent: "Aucun contenu disponible pour le moment.",
+      footer: "© 2025 BeatsMarket - Tous droits réservés",
+      cgv: "Conditions Générales de Vente",
+      contact: "Contactez-nous",
+    },
+    en: {
+      welcome: "Welcome to BeatsMarket",
+      chooseProfile: "Choose your profile to get started:",
+      beatmaker: "I am a BeatMaker",
+      buyer: "I want to buy beats",
+      featured: "Featured Beatmakers",
+      listenBeats: "Listen to some selected beats",
+      noContent: "No content available at the moment.",
+      footer: "© 2025 BeatsMarket - All rights reserved",
+      cgv: "Terms and Conditions of Sale",
+      contact: "Contact us",
+    },
+  };
 
-  const featuredBeats = beats.filter(b => b.isFeatured);
-
-  const styles = ['all', 'Trap', 'Drill', 'RnB', 'Afro'];
+  const txt = t[lang];
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>{t('welcome_title')}</h1>
-      <p>{t('welcome_description')}</p>
-
-      {/* Filtres */}
-      <div style={{ margin: '1rem 0' }}>
-        {styles.map(style => (
+    <div style={{ fontFamily: 'Arial, sans-serif', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      {/* HEADER */}
+      <header style={{ padding: 20, borderBottom: '1px solid #ddd', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ fontWeight: 'bold', fontSize: 26, color: '#1DB954', cursor: 'pointer' }} onClick={() => router.push('/')}>
+          BeatsMarket
+        </div>
+        <div>
           <button
-            key={style}
-            onClick={() => setSelectedStyle(style)}
+            onClick={() => setLang('fr')}
+            disabled={lang === 'fr'}
             style={{
-              marginRight: '1rem',
-              padding: '0.5rem 1rem',
-              backgroundColor: selectedStyle === style ? '#000' : '#ccc',
-              color: selectedStyle === style ? '#fff' : '#000',
+              marginRight: 8,
+              padding: '6px 12px',
+              backgroundColor: lang === 'fr' ? '#1DB954' : '#eee',
+              color: lang === 'fr' ? '#fff' : '#333',
               border: 'none',
-              borderRadius: '6px',
-              cursor: 'pointer'
+              borderRadius: 5,
+              cursor: lang === 'fr' ? 'default' : 'pointer',
             }}
           >
-            {t(`style_${style.toLowerCase()}`)}
+            FR
           </button>
-        ))}
-      </div>
-
-      {/* Beats en avant */}
-      {featuredBeats.length > 0 && (
-        <div>
-          <h2>{t('featured_title')}</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-            {featuredBeats.map((beat) => (
-              <BeatCard key={beat.id} beat={beat} />
-            ))}
-          </div>
+          <button
+            onClick={() => setLang('en')}
+            disabled={lang === 'en'}
+            style={{
+              padding: '6px 12px',
+              backgroundColor: lang === 'en' ? '#1DB954' : '#eee',
+              color: lang === 'en' ? '#fff' : '#333',
+              border: 'none',
+              borderRadius: 5,
+              cursor: lang === 'en' ? 'default' : 'pointer',
+            }}
+          >
+            EN
+          </button>
         </div>
-      )}
+      </header>
 
-      {/* Tous les beats */}
-      <div style={{ marginTop: '2rem' }}>
-        <h2>{t('all_beats_title')}</h2>
-        {filteredBeats.length === 0 ? (
-          <p>{t('no_beats')}</p>
-        ) : (
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-            {filteredBeats.map((beat) => (
-              <BeatCard key={beat.id} beat={beat} />
-            ))}
-          </div>
-        )}
-      </div>
+      {/* MAIN */}
+      <main style={{ flexGrow: 1, maxWidth: 900, margin: '30px auto', padding: '0 20px', textAlign: 'center' }}>
+        <h1>{txt.welcome}</h1>
+        <p style={{ fontSize: 20, marginBottom: 40 }}>{txt.chooseProfile}</p>
+
+        {/* Choix profil */}
+        <div style={{ marginBottom: 50 }}>
+          <button
+            onClick={() => router.push('/signup/beatmaker')}
+            style={{
+              padding: '15px 50px',
+              margin: '0 20px',
+              fontSize: 18,
+              borderRadius: 8,
+              border: 'none',
+              backgroundColor: '#1DB954',
+              color: 'white',
+              cursor: 'pointer',
+              minWidth: 180,
+            }}
+          >
+            {txt.beatmaker}
+          </button>
+
+          <button
+            onClick={() => router.push('/signup/buyer')}
+            style={{
+              padding: '15px 50px',
+              margin: '0 20px',
+              fontSize: 18,
+              borderRadius: 8,
+              border: 'none',
+              backgroundColor: '#333',
+              color: 'white',
+              cursor: 'pointer',
+              minWidth: 180,
+            }}
+          >
+            {txt.buyer}
+          </button>
+        </div>
+
+        {/* Beats en écoute - section vide prête à être remplie */}
+        <section style={{ marginBottom: 60 }}>
+          <h2>{txt.listenBeats}</h2>
+          {/* Ici, plus tard tu affiches la liste des beats avec lecteur audio */}
+          <p style={{ color: '#999', fontStyle: 'italic' }}>{txt.noContent}</p>
+        </section>
+
+        {/* Beatmakers mis en avant - section vide prête à être remplie */}
+        <section style={{ marginBottom: 60 }}>
+          <h2>{txt.featured}</h2>
+          {/* Ici, plus tard tu affiches les beatmakers mis en avant */}
+          <p style={{ color: '#999', fontStyle: 'italic' }}>{txt.noContent}</p>
+        </section>
+      </main>
+
+      {/* FOOTER */}
+      <footer
+        style={{
+          borderTop: '1px solid #ddd',
+          padding: '20px 10px',
+          textAlign: 'center',
+          color: '#777',
+          fontSize: 14,
+        }}
+      >
+        <div>{txt.footer}</div>
+        <div>
+          <a href="/cgv" target="_blank" rel="noopener noreferrer" style={{ color: '#1DB954', textDecoration: 'none' }}>
+            {txt.cgv}
+          </a>{' '}
+          |{' '}
+          <a href="/contact" style={{ color: '#1DB954', textDecoration: 'none' }}>
+            {txt.contact}
+          </a>
+        </div>
+      </footer>
     </div>
   );
-}
-
-// Composant BeatCard
-function BeatCard({ beat }) {
-  return (
-    <div style={{ width: 300, border: '1px solid #ccc', padding: '1rem', borderRadius: '10px' }}>
-      <h3>{beat.title}</h3>
-      <p>{beat.style}</p>
-      <audio controls src={beat.previewURL} style={{ width: '100%' }} />
-      <Link href={`/beatmaker/${beat.userId}`} style={{ display: 'block', marginTop: '0.5rem' }}>
-        👤 Voir le beatmaker
-      </Link>
-    </div>
-  );
-}
-
-// Chargement des beats depuis Firestore
-export async function getStaticProps({ locale }) {
-  const beatsRef = collection(db, 'beats');
-  const q = query(beatsRef, where('isPublic', '==', true));
-  const querySnapshot = await getDocs(q);
-  const beats = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-  return {
-    props: {
-      beats,
-      ...(await serverSideTranslations(locale, ['home', 'common']))
-    },
-    revalidate: 10
-  };
 }
