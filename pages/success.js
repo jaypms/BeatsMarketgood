@@ -22,7 +22,7 @@ export default function SuccessPage() {
             backgroundColor: '#000',
             color: '#fff',
             border: 'none',
-            cursor: 'pointer',
+            cursor: 'pointer'
           }}
         >
           {t('go_to_profile')}
@@ -32,11 +32,10 @@ export default function SuccessPage() {
   );
 }
 
-// Cette fonction permet de charger les traductions au moment du rendu
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-    },
+      ...(await serverSideTranslations(locale, ['common']))
+    }
   };
 }
