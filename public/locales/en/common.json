@@ -1,8 +1,17 @@
 {
-  "payment_success_title": "Payment confirmed ✅",
-  "payment_success_message": "Thank you for your trust! Your subscription has been successfully activated.",
-  "payment_success_redirect": "You can now access your personal space.",
-  "go_to_profile": "Go to my profile",
+  "my_beats": "My beats",
+  "no_beats": "No beats yet.",
+  "upload": "Upload",
+  "profile": "Profile",
+  "subscription": "Subscription",
+  "success_title": "Payment successful!",
+  "success_message": "Thank you for your purchase.",
+  "success_redirect": "You will be redirected to your profile.",
+  "go_to_profile": "Go to profile",
   "video_thanks": "Thanks for watching this video.",
-  "video_subscribe": "Don’t forget to subscribe so you don’t miss any of my upcoming videos."
+  "ANTI": "Anti-theft with automatic watermark",
+  "select_language": "Select language",
+  "logout": "Logout",
+  "login": "Login",
+  "register": "Register"
 }
