@@ -1,0 +1,1 @@
+// Page Stripe Checkout pour abonnements

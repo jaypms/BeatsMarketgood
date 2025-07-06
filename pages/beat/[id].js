@@ -1,0 +1,1 @@
+// Page individuelle d’un beat

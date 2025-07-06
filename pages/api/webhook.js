@@ -1,0 +1,1 @@
+// Webhook Stripe (licence PDF + suppression exclusive)

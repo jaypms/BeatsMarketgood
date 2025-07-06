@@ -1,0 +1,1 @@
+// Config Next.js avec i18n

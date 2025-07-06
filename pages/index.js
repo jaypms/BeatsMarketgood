@@ -1,0 +1,1 @@
+// Page d'accueil avec protection audio et mise en avant
