@@ -1,0 +1,8 @@
+{
+  "payment_success_title": "Payment confirmed ✅",
+  "payment_success_message": "Thank you for your trust! Your subscription has been successfully activated.",
+  "payment_success_redirect": "You can now access your personal space.",
+  "go_to_profile": "Go to my profile",
+  "video_thanks": "Thanks for watching this video.",
+  "video_subscribe": "Don’t forget to subscribe so you don’t miss any of my upcoming videos."
+}
