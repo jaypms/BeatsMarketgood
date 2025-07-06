@@ -1,8 +1,17 @@
 {
-  "payment_success_title": "Paiement confirmé ✅",
-  "payment_success_message": "Merci pour votre confiance ! Votre abonnement a bien été activé.",
-  "payment_success_redirect": "Vous pouvez dès maintenant accéder à votre espace personnel.",
-  "go_to_profile": "Accéder à mon profil",
+  "my_beats": "Mes beats",
+  "no_beats": "Aucun beat pour le moment.",
+  "upload": "Téléverser",
+  "profile": "Profil",
+  "subscription": "Abonnement",
+  "success_title": "Paiement réussi !",
+  "success_message": "Merci pour votre achat.",
+  "success_redirect": "Vous allez être redirigé vers votre profil.",
+  "go_to_profile": "Aller au profil",
   "video_thanks": "Merci d'avoir regardé cette vidéo.",
-  "video_subscribe": "N'oubliez pas de vous abonner pour ne rien manquer de mes prochaines vidéos."
+  "ANTI": "Anti-vol par watermark automatique",
+  "select_language": "Choisir la langue",
+  "logout": "Se déconnecter",
+  "login": "Connexion",
+  "register": "Inscription"
 }
