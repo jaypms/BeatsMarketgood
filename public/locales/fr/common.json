@@ -1,7 +1,8 @@
 {
   "my_beats": "Mes beats",
   "no_beats": "Aucun beat pour le moment.",
-  "upload": "Téléverser",
+  "upload": "Téléverser un beat",
+  "beat_title": "Titre de l'instrumentale",
   "profile": "Profil",
   "subscription": "Abonnement",
   "success_title": "Paiement réussi !",
@@ -13,5 +14,9 @@
   "select_language": "Choisir la langue",
   "logout": "Se déconnecter",
   "login": "Connexion",
-  "register": "Inscription"
+  "register": "Inscription",
+  "style_trap": "Trap",
+  "style_drill": "Drill",
+  "style_rnb": "RnB",
+  "style_afro": "Afro"
 }
