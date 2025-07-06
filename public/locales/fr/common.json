@@ -18,5 +18,25 @@
   "style_trap": "Trap",
   "style_drill": "Drill",
   "style_rnb": "RnB",
-  "style_afro": "Afro"
+  "style_afro": "Afro",
+
+  "plan_free_title": "Gratuit",
+  "plan_free_price": "0 € / mois",
+  "plan_free_feature1": "3 beats maximum",
+  "plan_free_feature2": "30% de commission",
+  "plan_free_feature3": "Accès limité",
+
+  "plan_pro_title": "Pro",
+  "plan_pro_price": "10 € / mois",
+  "plan_pro_feature1": "10 beats maximum",
+  "plan_pro_feature2": "20% de commission",
+  "plan_pro_feature3": "Support prioritaire",
+
+  "plan_diamond_title": "Diamant",
+  "plan_diamond_price": "20 € / mois",
+  "plan_diamond_feature1": "Beats illimités",
+  "plan_diamond_feature2": "0% de commission",
+  "plan_diamond_feature3": "Mise en avant prioritaire",
+
+  "subscribe": "S'abonner"
 }
